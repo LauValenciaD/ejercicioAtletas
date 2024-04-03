@@ -3,10 +3,10 @@ import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
 public class Dorsal {
-	private Set <Integer> numDorsal;
+	private static Set <Integer> numDorsal;
 
 	//constructor
-	public Dorsal(Set<Integer> numDorsal, Random random) {
+	public Dorsal() {
 		super();
 		this.numDorsal = new HashSet <Integer>();
 	}
@@ -19,6 +19,6 @@ public class Dorsal {
         } while (numDorsal.contains(nuevoDorsal));
 
         numDorsal.add(nuevoDorsal);
-        return numDorsal;
+        return nuevoDorsal;
     }
 }
