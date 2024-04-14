@@ -1,32 +1,44 @@
 package ejercicioAtletas;
+import java.util.Map;
 
 public class Participante {
 //atributtes
 	private String nombre;
 	private int dorsal;
-	private String tipoParticipante;
-	private MarcasAnteriores marcasAnteriores;
-	
+	private String tipo;
+	private Map<Integer, Integer> marcasAnteriores; // Año de la competición y marca en segundos
+
 	//Constructor con marcas
-	public Participante(String nombre, String tipoParticipante, MarcasAnteriores marcasAnteriores) {
-		super();
-		this.nombre = nombre;
-		this.dorsal = Dorsal.generarDorsal(); //llamar al metodo
-		this.tipoParticipante = tipoParticipante;
-		this.marcasAnteriores = marcasAnteriores;
-	}
-	//Constructor sin marcas
-	public Participante(String nombre, int dorsal, String tipoParticipante) {
+	public Participante(String nombre, int dorsal, String tipoParticipante, Map<Integer, Integer> marcas) {
 		super();
 		this.nombre = nombre;
 		this.dorsal = dorsal;
-		this.tipoParticipante = tipoParticipante;
-		this.marcasAnteriores = null;
+		this.tipo = tipoParticipante;
+		this.marcasAnteriores = marcas;
 	}
 	//methods
-	 // Método para agregar una marca anterior
-    public void agregarMarcaAnterior(String añoCompeticion, double marcaSegundos) {
-        marcasAnteriores.agregarMarca(añoCompeticion, marcaSegundos);
-    }
-	
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public int getDorsal() {
+		return dorsal;
+	}
+	public void setDorsal(int dorsal) {
+		this.dorsal = dorsal;
+	}
+	public String getTipo() {
+		return tipo;
+	}
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+	public Map<Integer, Integer> getMarcasAnteriores() {
+		return marcasAnteriores;
+	}
+	public void setMarcasAnteriores(Map<Integer, Integer> marcasAnteriores) {
+		this.marcasAnteriores = marcasAnteriores;
+	}
 }
