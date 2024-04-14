@@ -32,7 +32,7 @@ public class Ejecucion {
 		                    String tipo;
 		                    do
 		                    {
-		                    System.out.println("Escribe el tipo: ");
+		                    System.out.println("Escribe el tipo (benjamin, alevin o juvenil): ");
 		                    tipo = scanner.next();
 		                    if (!tipo.equals("benjamin") && !tipo.equals("alevin") && !tipo.equals("juvenil"))
 		                    	System.out.println("Escribe un tipo válido.");
